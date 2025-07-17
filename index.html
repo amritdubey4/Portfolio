@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrit Dubey - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter (keeping Inter as it's a good modern font, similar feel to Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="scroll-smooth">
+    <!-- Header/Navigation -->
+    <header class="shadow-md py-4 sticky top-0 z-50 transition-colors duration-300">
+        <nav class="container flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold transition-colors duration-300 header-logo">Amrit Dubey</a>
+            <ul class="flex space-x-6 items-center nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <span id="theme-icon">☀️</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container py-8">
+        <!-- Hero Section -->
+        <section id="hero" class="mb-8 transition-colors duration-300">
+            <!-- Placeholder for your avatar image -->
+            <!-- <img src="https://placehold.co/180x180/007bff/ffffff?text=AD" alt="Amrit Dubey Avatar" class="hero-avatar"> -->
+            <img src="pic.jpeg" alt="Amrit Dubey Avatar" class="hero-avatar">
+            <h1 class="animate-fade-in-down">Hi, I'm Amrit Dubey</h1>
+            <p class="animate-fade-in-up">Motivated and detail-oriented computer science student with a passion for
+                building innovative solutions.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#projects" class="hero-button hero-button-primary">
+                    <i class="fas fa-code mr-2"></i> View Projects
+                </a>
+                <a href="#contact" class="hero-button hero-button-secondary">
+                    <i class="fas fa-envelope mr-2"></i> Get in Touch
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="card">
+            <h2 class="section-title">About Me</h2>
+            <p class="text-lg text-center">
+                I am a motivated and detail-oriented computer science student with hands-on experience in front-end
+                development, machine learning, and web technologies. I am proficient in Python, Java, and JavaScript
+                with a strong understanding of data structures, algorithms, and full-stack development. I thrive on
+                solving complex problems and continuously learning new technologies to create impactful applications.
+            </p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="card">
+            <h2 class="section-title">Education</h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100">Bachelor of Technology, Computer
+                        Science Engineering in Artificial Intelligence</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg">Noida Institute of Engineering and Technology
+                    </p>
+                    <p class="text-gray-500 text-base">2022-2026</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100">12th (PCM)</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg">Radhika Senior Secondary School</p>
+                    <p class="text-gray-500 text-base">2021-2022</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="card">
+            <h2 class="section-title">Skills</h2>
+            <div class="text-center">
+                <h3 class="text-xl font-medium text-gray-700 dark:text-gray-300 mb-5">Technical Skills:</h3>
+                <div class="flex flex-wrap justify-center mb-8">
+                    <span class="skill-item">Java</span>
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">C/C++</span>
+                    <span class="skill-item">HTML</span>
+                    <span class="skill-item">CSS</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">Node.js</span>
+                </div>
+                <h3 class="text-xl font-medium text-gray-700 dark:text-gray-300 mb-5">Computer Science Concepts:</h3>
+                <div class="flex flex-wrap justify-center mb-8">
+                    <span class="skill-item">Data Structures</span>
+                    <span class="skill-item">Algorithms</span>
+                    <span class="skill-item">OOP</span>
+                    <span class="skill-item">Cryptography</span>
+                </div>
+                <h3 class="text-xl font-medium text-gray-700 dark:text-gray-300 mb-5">Tools and Technologies:</h3>
+                <div class="flex flex-wrap justify-center">
+                    <span class="skill-item">Git</span>
+                    <span class="skill-item">GitHub</span>
+                    <span class="skill-item">VS Code</span>
+                    <span class="skill-item">TensorFlow</span>
+                    <span class="skill-item">Scikit-learn</span>
+                    <span class="skill-item">Pandas</span>
+                    <span class="skill-item">Matplotlib</span>
+                    <span class="skill-item">CNNs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="card">
+            <h2 class="section-title">Experience</h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100">Intern - CodSoft</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg">Greater Noida</p>
+                    <p class="text-gray-500 text-base">June 2024 - August 2024</p>
+                    <ul class="list-disc list-inside text-lg mt-3 space-y-2">
+                        <li>Developed three responsive websites, including a company portfolio, music store landing
+                            page, and agricultural disease detection interface.</li>
+                        <li>Built a personal portfolio showcasing all projects, demonstrating a full understanding of
+                            deployment and web hosting.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="card">
+            <h2 class="section-title">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card">
+                    <h3 class="text-xl font-semibold mb-3">Stock Value Prediction</h3>
+                    <p class="text-sm mb-4">Built a deep learning-based stock market prediction system using TensorFlow
+                        and Scikit-learn. Enhanced financial forecasting accuracy and usability through data
+                        preprocessing, normalization, and model tuning.</p>
+                    <span class="text-blue-600 dark:text-purple-400 text-sm font-medium">Tools: TensorFlow,
+                        Scikit-learn, Google Collab</span>
+                </div>
+                <div class="project-card">
+                    <h3 class="text-xl font-semibold mb-3">Customer Life Value Prediction</h3>
+                    <p class="text-sm mb-4">Developed a machine learning model to predict Customer Lifetime Value using
+                        regression techniques. Used Python libraries (Pandas, Scikit-learn, Matplotlib) to clean data,
+                        build the model, and visualize outcomes.</p>
+                    <span class="text-blue-600 dark:text-purple-400 text-sm font-medium">Tools: Python (Pandas,
+                        Scikit-learn, Matplotlib)</span>
+                </div>
+                <div class="project-card">
+                    <h3 class="text-xl font-semibold mb-3">Empowering Agriculture: AI-Driven Plant Disease Detection for
+                        Sustainable Crop Management</h3>
+                    <p class="text-sm mb-4">Developed a deep learning-based image classification model using CNNs to
+                        identify plant diseases from leaf images. Achieved 96% accuracy across four major crops by
+                        training the model on annotated agricultural datasets.</p>
+                    <span class="text-blue-600 dark:text-purple-400 text-sm font-medium">Tools: CNNs, Deep
+                        Learning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="card">
+            <h2 class="section-title">Certifications</h2>
+            <ul class="list-disc list-inside text-lg space-y-3 text-center">
+                <li>Javascript Essentials</li>
+                <li>ReactJs</li>
+                <li>Data Visualization with Python</li>
+                <li>Java Programming Fundamentals</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="card">
+            <h2 class="section-title">Contact</h2>
+            <div class="text-center text-lg space-y-3">
+                <p><strong>Email:</strong> <a href="mailto:amritrsss04@gmail.com"
+                        class="text-blue-600 dark:text-purple-400 hover:underline contact-link">amritrsss04@gmail.com</a>
+                </p>
+                <p><strong>Phone:</strong> +91 9569414927</p>
+                <p><strong>Location:</strong> Greater Noida, UP</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/amrit04" target="_blank"
+                        class="text-blue-600 dark:text-purple-400 hover:underline contact-link"><i
+                            class="fab fa-linkedin mr-2"></i>amrit04</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/amritdubey4" target="_blank"
+                        class="text-blue-600 dark:text-purple-400 hover:underline contact-link"><i
+                            class="fab fa-github mr-2"></i>amritdubey4</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 mt-8">
+        <p>&copy; 2025 Amrit Dubey. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

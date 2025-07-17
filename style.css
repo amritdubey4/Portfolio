@@ -1,0 +1,352 @@
+/* CSS Variables for Themes - Adjusted to match the example's aesthetic */
+:root {
+    /* Light Theme Defaults (inspired by the example's light mode) */
+    --bg-color: #f8f9fa;
+    /* Very light grey */
+    --card-bg: #ffffff;
+    --text-color: #495057;
+    /* Darker grey for body text */
+    --heading-color: #212529;
+    /* Even darker for headings */
+    --primary-color: #007bff;
+    /* A vibrant blue for accents */
+    --primary-light: #e0f2ff;
+    /* Light blue for skill items */
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    /* Subtle shadow */
+    --shadow-color-light: rgba(0, 0, 0, 0.03);
+    --project-shadow-hover: rgba(0, 0, 0, 0.15);
+    --hero-bg: #e9ecef;
+    /* Light grey for hero background */
+    --hero-text: #212529;
+    --footer-bg: #343a40;
+    /* Dark grey for footer */
+    --footer-text: #f8f9fa;
+    /* Light text for footer */
+    --button-primary-bg: #007bff;
+    --button-primary-text: #ffffff;
+    --button-secondary-bg: #6c757d;
+    --button-secondary-text: #ffffff;
+    --border-color: #dee2e6;
+    /* Light border for cards */
+}
+
+.dark-theme {
+    /* Dark Theme Overrides (inspired by the example's dark mode) */
+    --bg-color: #212529;
+    /* Dark background */
+    --card-bg: #343a40;
+    /* Dark card background */
+    --text-color: #ced4da;
+    /* Light text */
+    --heading-color: #f8f9fa;
+    /* Lighter headings */
+    --primary-color: #6a0dad;
+    /* A deep purple for accents */
+    --primary-light: #4c3d7d;
+    /* Darker purple for skill items */
+    --shadow-color: rgba(0, 0, 0, 0.6);
+    --shadow-color-light: rgba(0, 0, 0, 0.3);
+    --project-shadow-hover: rgba(0, 0, 0, 0.8);
+    --hero-bg: #2d3748;
+    /* Darker grey for hero background */
+    --hero-text: #f8f9fa;
+    --footer-bg: #1a1e21;
+    /* Even darker for footer */
+    --footer-text: #adb5bd;
+    --button-primary-bg: #6a0dad;
+    --button-primary-text: #ffffff;
+    --button-secondary-bg: #495057;
+    --button-secondary-text: #ffffff;
+    --border-color: #495057;
+    /* Darker border for cards */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    /* Larger headings */
+    font-weight: 800;
+    /* Extra bold */
+    color: var(--heading-color);
+    margin-bottom: 2.5rem;
+    /* More spacing */
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    /* Wider underline */
+    height: 5px;
+    /* Thicker underline */
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px -5px var(--shadow-color), 0 4px 8px -2px var(--shadow-color-light);
+    padding: 2.5rem;
+    /* More padding */
+    margin-bottom: 3rem;
+    /* More margin */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    /* Added transform */
+    border: 1px solid var(--border-color);
+    /* Added border */
+}
+
+.card:hover {
+    /* Added hover for general cards */
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -8px var(--project-shadow-hover);
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px -2px var(--shadow-color), 0 2px 4px -1px var(--shadow-color-light);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    /* Added border */
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    /* More pronounced lift */
+    box-shadow: 0 15px 30px -8px var(--project-shadow-hover);
+}
+
+.skill-item {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    padding: 0.6rem 1.2rem;
+    /* Larger pills */
+    border-radius: 9999px;
+    font-weight: 600;
+    /* Bolder text */
+    margin: 0.6rem;
+    /* More spacing */
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    /* Added transform */
+}
+
+.skill-item:hover {
+    /* Added hover for skill items */
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+    color: var(--button-primary-text);
+    /* White text on hover */
+}
+
+.nav-link {
+    transition: color 0.3s ease, transform 0.2s ease;
+    /* Added transform */
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    /* Subtle lift */
+}
+
+/* Header specific styles */
+header {
+    background-color: var(--card-bg);
+    /* Header background matches card background */
+    border-bottom: 1px solid var(--border-color);
+    /* Subtle border */
+}
+
+header .nav-link,
+header .text-gray-900 {
+    color: var(--heading-color);
+    /* Ensure header text adapts */
+}
+
+header #theme-toggle {
+    color: var(--heading-color);
+}
+
+header .header-logo:hover {
+    /* Hover for header logo */
+    color: var(--primary-color);
+}
+
+/* Hero Section specific styles */
+#hero {
+    background-color: var(--hero-bg);
+    color: var(--hero-text);
+    border-radius: 1.5rem;
+    /* More rounded */
+    padding: 4rem 2rem;
+    /* More padding */
+    box-shadow: 0 20px 40px -10px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#hero .hero-avatar {
+    width: 180px;
+    /* Larger avatar */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    /* Primary color border */
+    box-shadow: 0 0 0 8px var(--primary-light);
+    /* Light primary color glow */
+    margin-bottom: 2rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    /* Even larger heading */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+#hero p {
+    font-size: 1.5rem;
+    /* Larger paragraph */
+    margin-bottom: 2.5rem;
+    color: var(--text-color);
+}
+
+.hero-button {
+    padding: 0.8rem 2.5rem;
+    border-radius: 0.75rem;
+    /* Slightly less rounded than full */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button-primary {
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+}
+
+.hero-button-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+.hero-button-secondary {
+    background-color: var(--button-secondary-bg);
+    color: var(--button-secondary-text);
+    border: 1px solid var(--button-secondary-bg);
+}
+
+.hero-button-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+/* Footer specific styles */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    /* Larger icon */
+    color: var(--heading-color);
+    /* Matches header text */
+    transition: color 0.3s ease;
+    margin-left: 1rem;
+    /* Space from nav links */
+}
+
+#theme-toggle:hover {
+    color: var(--primary-color);
+}
+
+/* Contact links hover */
+.contact-link:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    #hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero-avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+        grid-template-columns: 1fr;
+        /* Stack projects on small screens */
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide nav links on small screens, could add a hamburger menu */
+    }
+
+    .flex.justify-between.items-center {
+        justify-content: center;
+        /* Center logo/title on small screens */
+    }
+}
