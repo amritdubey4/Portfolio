@@ -4,7 +4,7 @@
     --bg-color: #f8f9fa;
     /* Very light grey */
     --card-bg: #ffffff;
-    --text-color: #495057;
+    --text-color: #ffffff;
     /* Darker grey for body text */
     --heading-color: #212529;
     /* Even darker for headings */
@@ -37,9 +37,9 @@
     /* Dark background */
     --card-bg: #343a40;
     /* Dark card background */
-    --text-color: #ced4da;
+    --text-color: #0d77e1;
     /* Light text */
-    --heading-color: #f8f9fa;
+    --heading-color: #ffffff;
     /* Lighter headings */
     --primary-color: #00ffee;
     /* A deep purple for accents */
