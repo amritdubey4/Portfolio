@@ -4,25 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Amrit Dubey — AI-focused CSE student building ML and web apps.">
     <title>Amrit Dubey - Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter (keeping Inter as it's a good modern font, similar feel to Poppins) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- SEO / Social -->
+    <meta property="og:title" content="Amrit Dubey - Portfolio">
+    <meta property="og:description" content="AI/ML projects, web development, certifications, and contact.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.ico">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="scroll-smooth">
     <!-- Header/Navigation -->
-    <header class="shadow-md py-4 sticky top-0 z-50 transition-colors duration-300">
-        <nav class="container flex justify-between items-center">
-            <ul class="flex space-x-6 items-center nav-links">
-                <a href="#hero" class="text-3xl font-extrabold transition-colors duration-300 header-logo">Amrit
-                    <span>Dubey</span></a>
+    <header id="site-header" class="shadow-md py-4 sticky top-0 z-50 transition-colors duration-300">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <a href="#hero" class="text-3xl font-extrabold transition-colors duration-300 header-logo">Amrit
+                <span>Dubey</span></a>
+            <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+                <span class="fas fa-bars"></span>
+            </button>
+            <ul id="primary-nav" class="flex space-x-6 items-center nav-links">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -39,12 +50,13 @@
         </nav>
     </header>
 
-    <main class="container py-8">
+    <main class="container mx-auto py-8 px-4">
         <!-- Hero Section -->
-        <section id="hero" class="mb-8 transition-colors duration-300">
+        <section id="hero" class="mb-8 transition-colors duration-300 reveal-on-scroll is-visible">
             <!-- Placeholder for your avatar image -->
             <!-- <img src="https://placehold.co/180x180/007bff/ffffff?text=AD" alt="Amrit Dubey Avatar" class="hero-avatar"> -->
-            <img src="pic.jpeg" alt="Amrit Dubey Avatar" class="hero-avatar">
+            <img src="pic.jpeg" alt="Amrit Dubey Avatar" class="hero-avatar" width="180" height="180" loading="lazy"
+                decoding="async">
             <h1 class="animate-fade-in-down">Hi, I'm Amrit Dubey</h1>
             <p class="animate-fade-in-up">Motivated and detail-oriented computer science student with a passion for
                 building innovative solutions.</p>
@@ -59,7 +71,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="card">
+        <section id="about" class="card reveal-on-scroll">
             <h2 class="section-title">About Me</h2>
             <p class="text-lg text-center">
                 I am a motivated and detail-oriented computer science student with hands-on experience in front-end
@@ -70,7 +82,7 @@
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="card">
+        <section id="education" class="card reveal-on-scroll">
             <h2 class="section-title">Education</h2>
             <div class="space-y-8">
                 <div>
@@ -89,7 +101,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="card">
+        <section id="skills" class="card reveal-on-scroll">
             <h2 class="section-title">Skills</h2>
             <div class="text-center">
                 <h3 class="text-xl font-medium text-gray-700 dark:text-gray-300 mb-5">Technical Skills:</h3>
@@ -124,7 +136,7 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="card">
+        <section id="experience" class="card reveal-on-scroll">
             <h2 class="section-title">Experience</h2>
             <div class="space-y-8">
                 <div>
@@ -142,7 +154,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="card">
+        <section id="projects" class="card reveal-on-scroll">
             <h2 class="section-title">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="project-card">
@@ -174,7 +186,7 @@
         </section>
 
         <!-- Certifications Section -->
-        <section id="certifications" class="card">
+        <section id="certifications" class="card reveal-on-scroll">
             <h2 class="section-title">Certifications</h2>
             <ul class="list-disc list-inside text-lg space-y-3 text-center">
                 <li>Javascript Essentials</li>
@@ -185,7 +197,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="card">
+        <section id="contact" class="card reveal-on-scroll">
             <h2 class="section-title">Contact</h2>
             <div class="text-center text-lg space-y-3">
                 <p><strong>Email:</strong> <a href="mailto:amritrsss04@gmail.com"
@@ -194,9 +206,11 @@
                 <p><strong>Phone:</strong> +91 9569414927</p>
                 <p><strong>Location:</strong> Greater Noida, UP</p>
                 <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/amrit04" target="_blank"
+                        rel="noopener noreferrer"
                         class="text-blue-600 dark:text-purple-400 hover:underline contact-link"><i
                             class="fab fa-linkedin mr-2"></i>amrit04</a></p>
                 <p><strong>GitHub:</strong> <a href="https://github.com/amritdubey4" target="_blank"
+                        rel="noopener noreferrer"
                         class="text-blue-600 dark:text-purple-400 hover:underline contact-link"><i
                             class="fab fa-github mr-2"></i>amritdubey4</a></p>
             </div>
@@ -209,7 +223,7 @@
     </footer>
 
     <!-- JavaScript for Theme Toggle -->
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </body>
 
 </html>

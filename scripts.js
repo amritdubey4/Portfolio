@@ -49,3 +49,50 @@ themeToggle.addEventListener('click', () => {
 		setTheme('dark');
 	}
 });
+
+// Scroll reveal animations using IntersectionObserver
+(function initScrollReveal() {
+	const prefersReduced =
+		window.matchMedia &&
+		window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	if (prefersReduced) return;
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('is-visible');
+					observer.unobserve(entry.target);
+				}
+			});
+		},
+		{ threshold: 0.15, rootMargin: '0px 0px -5% 0px' }
+	);
+
+	document
+		.querySelectorAll('.reveal-on-scroll')
+		.forEach((el) => observer.observe(el));
+})();
+
+// Mobile menu toggle
+(function initMobileMenu() {
+	const toggle = document.getElementById('menu-toggle');
+	const nav = document.getElementById('primary-nav');
+	if (!toggle || !nav) return;
+	const closeMenu = () => {
+		nav.classList.remove('open');
+		toggle.setAttribute('aria-expanded', 'false');
+	};
+	const openMenu = () => {
+		nav.classList.add('open');
+		toggle.setAttribute('aria-expanded', 'true');
+	};
+	toggle.addEventListener('click', () => {
+		const isOpen = nav.classList.contains('open');
+		if (isOpen) closeMenu();
+		else openMenu();
+	});
+	// Close on link click (for single-page navigation)
+	nav
+		.querySelectorAll('a')
+		.forEach((a) => a.addEventListener('click', closeMenu));
+})();
