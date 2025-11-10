@@ -80,7 +80,7 @@ themeToggle.addEventListener('click', () => {
 	if (!toggle || !nav) return;
 	const closeMenu = () => {
 		nav.classList.remove('open');
-		toggle.setAttribute('aria-expanded', 'false');
+		toggle.setAttribute('aria-expanded', 'true');
 	};
 	const openMenu = () => {
 		nav.classList.add('open');
