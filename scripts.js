@@ -84,7 +84,7 @@ themeToggle.addEventListener('click', () => {
 	};
 	const openMenu = () => {
 		nav.classList.add('open');
-		toggle.setAttribute('aria-expanded', 'true');
+		toggle.setAttribute('aria-expanded', 'false');
 	};
 	toggle.addEventListener('click', () => {
 		const isOpen = nav.classList.contains('open');
